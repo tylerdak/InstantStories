@@ -8,7 +8,8 @@ from pathlib import Path
 # To open dialog box for file getter
 from tkinter import *
 from tkinter.filedialog import askopenfilename
-#
+# For adding date/time to filename
+from datetime import datetime
 
 Tk().withdraw()
 
@@ -56,7 +57,8 @@ while (True):
 
         if (not validFile):
             continue
-        story = Path(txtFilename).read_text()
+        textFilepath = Path(txtFilename)
+        story = textFilepath.read_text()
         words = []
         specials = []
         for line in story.splitlines(True):
@@ -88,6 +90,27 @@ while (True):
         finishedStory = " ".join(words).replace("\n ","\n")
         print()
         print(finishedStory)
+        print()
+        saveChoice = 0
+        while not (isInt(saveChoice) and (saveChoice == 1 or saveChoice == 2)):
+            print("Would you like to save your story?\n(Saving to local directory)")
+            print("[1] YES")
+            print("[2] NO")
+            print("CHOICE: ",end="")
+            saveChoiceIn = input()
+            if (isInt(saveChoiceIn)):
+                saveChoice = int(saveChoiceIn)
+
+        if (saveChoice == 1):
+            now = datetime.now()
+            name = now.strftime(textFilepath.stem + " - %Y-%m-%d - %H%M%S.txt")
+            with open(str(name),"w", newline='') as f:
+                f.write(finishedStory)
+        elif (saveChoice == 2):
+            continue
+        else:
+            print("This should not have happened. LINE 106, please report the error.")
+            sys.exit()
 
     elif (modeChoice == 2):
         # Tell player formatting of Mad Libs stories
