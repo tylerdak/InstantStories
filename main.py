@@ -88,9 +88,9 @@ while (True):
                 replacements.pop(0)
 
         finishedStory = " ".join(words).replace("\n ","\n")
-        print()
+        print("\n")
         print(finishedStory)
-        print()
+        print("\n")
         saveChoice = 0
         while not (isInt(saveChoice) and (saveChoice == 1 or saveChoice == 2)):
             print("Would you like to save your story?\n(Saving to local directory)")
@@ -117,6 +117,7 @@ while (True):
         print("To learn how to create a Mad Libs story, please refer to \"Story Formatting\" in the README.md.")
     elif (modeChoice == 3):
         print("Thanks for playing!")
+        print()
         sys.exit()
     else:
         print("This shouldn't have happened. Please report the issue.")    
