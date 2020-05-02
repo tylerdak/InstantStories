@@ -1,5 +1,5 @@
 ![Instant Stories](banner.png)
-Instant Stories is a MadLibs-style story maker. It's almost as easy to design stories for this program as it is to write them in the program!
+Instant Stories is a MadLibs-style story maker. It's almost as easy to write story templates for this program as it is to fill them in with the program!
 
 ## Story Formatting
 To create a story template, simply create a .txt file where you will write your story. To make variables, simply put the category in between {curly braces}, making sure to replace any spaces with underscores in those braces.

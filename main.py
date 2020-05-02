@@ -16,14 +16,14 @@ Tk().withdraw()
 while (True):
     # Greet the user
     print()
-    print("Welcome to Mad Libs!")
+    print("Welcome to Instant Stories!")
     
     modeChoice = 0
 
     while not (isInt(modeChoice) and (modeChoice in [1,2,3])):
         print("Please select what you would like to do:")
-        print("[1] Play an existing Mad Libs")
-        print("[2] How to create a Mad Libs")
+        print("[1] Use an existing story template")
+        print("[2] How to create a story template")
         print("[3] Exit program")
         print("CHOICE: ",end="")
         modeChoiceIn = input()
@@ -114,7 +114,7 @@ while (True):
 
     elif (modeChoice == 2):
         # Tell player formatting of Mad Libs stories
-        print("To learn how to create a Mad Libs story, please refer to \"Story Formatting\" in the README.md.")
+        print("Creating a story is very simple! To learn how to create a story template, please refer to \"Story Formatting\" in the README.md. (Also available at https://tylerdakin.com/InstantStories)")
     elif (modeChoice == 3):
         print("Thanks for playing!")
         print()
