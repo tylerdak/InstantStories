@@ -59,7 +59,7 @@ while (True):
         story = Path(txtFilename).read_text()
         words = []
         specials = []
-        for line in story.splitlines():
+        for line in story.splitlines(True):
             for word in line.split(" "):
                 words.append(word)
         for word in words:
@@ -85,7 +85,7 @@ while (True):
                 words[i] = replacements[0] 
                 replacements.pop(0)
 
-        finishedStory = " ".join(words)
+        finishedStory = " ".join(words).replace("\n ","\n")
         print()
         print(finishedStory)
 

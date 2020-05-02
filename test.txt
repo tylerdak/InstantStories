@@ -1,1 +1,7 @@
-This is a \ADJECTIVE Mad Libs!
+This is a {ADJECTIVE} Mad Libs!
+
+It also tests line breaks.
+
+This is a new paragraph.
+
+    And so is this, but this one has a tab first.
